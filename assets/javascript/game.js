@@ -56,3 +56,43 @@ crystals.on("click", ".crystal-image", function () {
     }
 
 });
+
+/* Extra small devices (portrait phones, less than 576px)*/
+
+@media (max-width: 575.98px) {
+    .crystal-image {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+
+@media (max-width: 767.98px) {
+    .crystal-image {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px)*/
+
+@media (max-width: 991.98px) {
+    .crystal-image {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+/*  Large devices (desktops, less than 1200px)*/
+
+@media (max-width: 1199.98px) {
+    .crystal-image {
+        width: 245px;
+        height: 245px;
+    }
+}
+
+/* //Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+*/

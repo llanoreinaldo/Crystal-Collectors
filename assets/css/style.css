@@ -12,6 +12,19 @@ body {
     width: 100%;
 }
 
+/*footer*/
+
+footer {
+    background: #666;
+    color: #fff;
+    padding: 30px 0;
+    clear: both;
+    border-top: 8px solid #4aaaa5;
+    color: #ccc;
+    font-size: 18px;
+    text-align: center;
+}
+
 .jumbotron {
     background-color: #81d8d0;
 }
@@ -23,7 +36,7 @@ body {
 
 /* Extra small devices (portrait phones, less than 576px)*/
 
-@media (max-width: 575.98px)  {
+@media (max-width: 575.98px) {
     .crystal-image {
         width: 125px;
         height: 125px;
@@ -32,7 +45,7 @@ body {
 
 /* Small devices (landscape phones, less than 768px)*/
 
-@media (max-width: 767.98px)   {
+@media (max-width: 767.98px) {
     .crystal-image {
         width: 130px;
         height: 130px;
