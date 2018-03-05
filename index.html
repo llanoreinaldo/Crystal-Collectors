@@ -1,14 +1,98 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Rei's Crystal Collectors Game</title>
+
+    <!-- STYLING/CSS  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- JAVASCRIPT  -->
+    <!-- ========================================= -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
+    <element id="background"></element>
+
 </head>
 
 <body>
+    <br>
+    <div class=container>
+        <div class="jumbotron">
+            <h1 class="display-4">Rei's Crystal Collectors Game</h1>
+            <hr class="my-4">
+            <p>Pick a crystal ring below to add points to your total score. You when when your score matches the game total.</p>
+            <p class="lead">
+                <a class="btn btn-secondary btn-lg" role="button">Let's Play!</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col">
+            <div class="row">
+                <div class="p-3 mb-2 bg-light text-dark">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h1>Game Stats</h1>
+                            <hr class='my-2'>
+                            <strong> Your Score: </strong>
+                            <span id='user-score'>0</span>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <strong>Score to Match:</strong>
+                            <span id='random-score'>0</span>
+                        </div>
+                    </div>
+                    <hr class='my-2'>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p> Win Counter:
+                                <span id='wins'>0</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <strong>Loss Counter:</strong>
+                            <span id='losses'>0</span>
+                        </div>
+                    </div>
+
+                    <hr class='my-2'>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <h1>Number to Guess:
+                                <span id="number-to-guess">_ _ _</span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col">
+                        <div id="crystals" class="rounded mx-auto d-block">
+                            <!-- We gave our crystal image the class ".crystal-image" to apply the resize-->
+                            <img class="crystal-image position=relative" src="assets/images/tiffany1.jpg" alt="crystals">
+                            <img class="crystal-image position=relative" src="assets/images/tiffany2.jpg" alt="crystals">
+                            <br>
+                            <img class="crystal-image position=relative" src="assets/images/tiffany3.jpg" alt="crystals">
+                            <img class="crystal-image position=relative" src="assets/images/tiffany4.jpg" alt="crystals">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 </body>
 

@@ -1,0 +1,63 @@
+.crystal-image {
+    width: 300px;
+    height: 300px;
+}
+
+body {
+    background-image: url("../images/tiffanybackground.jpg");
+    font-size: 18px;
+    line-height: 34px;
+    font-family: inherit;
+    color: white;
+    width: 100%;
+}
+
+.jumbotron {
+    background-color: #81d8d0;
+}
+
+.cointainer {
+    background-color: #81d8d0;
+    color: #81d8d0;
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+
+@media (max-width: 640px) {
+    .crystal-image {
+        width: 115px;
+        height: 115px;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+
+@media (max-width: 767.98px) {
+    .crystal-image {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* Medium devices (tablets, less than 992px)*/
+
+@media (max-width: 990px) {
+    .crystal-image {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+/*  Large devices (desktops, less than 1200px)*/
+
+@media (min-width: 1000px) {
+    .crystal-image {
+        width: 245px;
+        height: 245px;
+    }
+
+}
+
+/* //Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width
+*/
