@@ -20,7 +20,6 @@
     <!-- JAVASCRIPT  -->
     <!-- ========================================= -->
     <script src="assets/javascript/game.js"></script>
-    <element id="background"></element>
 
 </head>
 
@@ -30,7 +29,7 @@
         <div class="jumbotron">
             <h1 class="display-4">Rei's Crystal Collectors Game</h1>
             <hr class="my-4">
-            <p>Pick a crystal ring below to add points to your total score. You when when your score matches the game total.</p>
+            <p>Click on crystal ring below to add hidden points to your total score. You win when when your score matches the score to match without going over.</p>
             <p class="lead">
                 <a class="btn btn-secondary btn-lg" role="button">Let's Play!</a>
             </p>
@@ -51,7 +50,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <strong>Score to Match:</strong>
-                      <span id='random-score'>0</span>
+                            <span id='random-score'>0</span>
                         </div>
                     </div>
                     <hr class='my-2'>
@@ -68,18 +67,10 @@
                             <span id='losses'>0</span>
                         </div>
                     </div>
-                    <hr class='my-2'>
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <h1>Number to Guess:
-                                <span id="number-to-guess"></span>
-                            </h1>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-7">
-                <div id="crystals" class="rounded mx-auto d-block">
+                <div id="crystals">
                     <!-- We gave our crystal image the class ".crystal-image" to apply the resize-->
                     <img class="crystal-image position=relative" src="assets/images/tiffany1.jpg" alt="crystals">
                     <img class="crystal-image position=relative" src="assets/images/tiffany2.jpg" alt="crystals">
