@@ -1,11 +1,38 @@
-.crystal-image {
+/*img {
+    width: 75%;
+    padding-bottom: 5px;
+}*/
+
+#tl{
+    width: 75%;
+    padding-bottom: 5px;
+}
+
+#tr{
+    width: 75%;
+    padding-bottom: 5px;
+}
+
+#bl{
+    width: 75%;
+    padding-bottom: 5px;
+}
+
+
+#br{
+    width: 75%;
+    padding-bottom: 5px;
+}
+
+/*.crystal-image {
     width: 300px;
     height: 300px;
 }
+*/
 
 body {
-    background-image: url("../images/tiffanybackground.jpg");
-    font-size: 18px;
+    background-color: #81d8d0;
+    font-size: 16px;
     line-height: 34px;
     font-family: inherit;
     color: white;
@@ -25,51 +52,22 @@ footer {
     text-align: center;
 }
 
-.jumbotron {
-    background-color: #81d8d0;
-}
-
 .cointainer {
     background-color: #81d8d0;
-    color: #81d8d0;
+    color: white;
 }
 
-/* Extra small devices (portrait phones, less than 576px)*/
-
-@media screen and (max-width: 575.98px) {
-    .crystal-image {
-        width: 125px;
-        height: 125px;
-    }
+.anime {
+    float: left;
+    width: 90%;
+    opacity: .5;
+    transition: .5s;
+    /* Animation */
 }
 
-/* Small devices (landscape phones, less than 768px)*/
-
-@media screen and (max-width: 767.98px) {
-    .crystal-image {
-        width: 130px;
-        height: 130px;
-    }
+.anime:hover {
+    transition: .5s;
+    /* Animation */
+    opacity: 1;
+    border-radius: 75%;
 }
-
-/* Medium devices (tablets, less than 992px)*/
-
-@media screen and (max-width: 991.98px) {
-    .crystal-image {
-        width: 175px;
-        height: 175px;
-    }
-}
-
-/*  Large devices (desktops, less than 1200px)*/
-
-@media screen and (max-width: 1199.98px) {
-    .crystal-image {
-        width: 245px;
-        height: 245px;
-    }
-}
-
-/* //Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width
-*/

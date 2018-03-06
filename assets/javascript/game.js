@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    
+});
+
 var targetNumber = 53;
 
 $("#number-to-guess").text(targetNumber);
