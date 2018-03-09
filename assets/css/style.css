@@ -1,7 +1,4 @@
-/*img {
-    width: 75%;
-    padding-bottom: 5px;
-}*/
+
 
 #tl{
     width: 75%;
@@ -24,11 +21,11 @@
     padding-bottom: 5px;
 }
 
-/*.crystal-image {
+.crystal-image {
     width: 300px;
     height: 300px;
 }
-*/
+
 
 body {
     background-color: #81d8d0;
@@ -36,8 +33,9 @@ body {
     line-height: 34px;
     font-family: inherit;
     color: white;
-    width: 100%;
+
 }
+
 
 /*footer*/
 
