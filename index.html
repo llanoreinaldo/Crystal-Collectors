@@ -1,109 +1,101 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rei's Crystal Collectors Game</title>
-
+    <title>Crystal's Collectors Game</title>
     <!-- STYLING/CSS  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
 
     <!-- JQUERY  -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN "
-        crossorigin="anonymous "></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js "></script>
 
-    <!-- JAVASCRIPT  -->
-    <!-- ========================================= -->
-    <script src="assets/javascript/game.js"></script>
+
+
 
 </head>
 
 <body>
-    <br>
-    <div class="card mb-3 text-right">
-        <img class="card-img-top" src="assets/images/tiffanybackground.jpg" alt="Card image cap">
-        <div class="card-img-overlay">
-            <h1 class="card-title">Crystal Collectors Game</h1>
-            <p>Click on any crystal ring below<br>
-             to add points to your total score.<br>
-            Win when when Your Score matches<br>
-            the Score to Match without going over.<br>
-            Best of luck!</p>
-            <p class="card-text">
-                <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
-        </div>
-    </div>
+ 
     <div class="container">
         <div class="row">
-            <div class="col-4 col-xs-6 col-s-6 col-m-4 col-lg-3 ">
+            <div class="col-4 col-xs-6 col-s-6 col-m-4 col-lg-3">
                 <div class="p-3 mb-2 bg-light text-dark">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <strong><h2>Game Stats</h2></strong>
+                            <h2>Game Stats</h2>
                             <hr class='my-2'>
-                            <strong> Your Score: </strong>
-                            <span id='user-score'>0</span>
+                            <strong>
+                                <p id="score"></p>
+                            </strong>
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <strong>Score to Match:</strong>
-                            <span id='random-score'>0</span>
+                            <strong>
+                                <p id="results"></p>
+                            </strong>
                         </div>
                     </div>
                     <hr class='my-2'>
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <strong> Win Counter:</strong>
-                            <span id='wins'>0</span>
+                            <strong>
+                                <p id="wins"></p>
+                            </strong>
                         </div>
                     </div>
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <strong>Loss Counter:</strong>
-                            <span id='losses'>0</span>
+                            <strong>
+                                <p id="losses"></p>
+                            </strong>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="row">
-                    <div class="col" id="tl">
-                        <img src="assets/images/tiffany1.jpg" class="anime crystal-image" alt="crystal 1" id="tl crystals">
-                    </div>
-                    <div class="col" id="tr">
-                        <img src="assets/images/tiffany2.jpg" class="anime crystal-image" alt="crystal 2"  id="tr crystals">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col" id="bl">
-                        <img src="assets/images/tiffany3.jpg" class="anime crystal-image" alt="crystal 3"  id="bl crystals">
-                    </div>
-                    <div class="col" id="br">
-                        <img src="assets/images/tiffany4.jpg" class="anime crystal-image" alt="crystal 4"  id="br crystals">
+                    <!-- Crystals get added to site-->
+                    <div class="crystals">
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <br>
+    <div class="card mb-3 text-right">
+        <img class="card-img-top" src="assets/images/tiffanybackground.jpg" height="25%" alt="Card image cap">
+        <div class="card-img-overlay">
+            <h1 class="card-title">Crystal Collectors Game</h1>
+            <p class="card-text">
+                <p>Click on any crystal ring above
+                <br> to add points to your total score.
+                <br> Win when when Your Score matches
+                <br> the Random Score without going over.
+                <br> Best of luck!</p>
+            </p>
+        </div>
+    </div>
+
+
+
     <footer>
-        <div class=" container ">
+        <div class="container">
             <div class="col">
                 &copy; Copywright 2018 Reinaldo Llano, Jr.
             </div>
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q "
-        crossorigin="anonymous "></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl "
-        crossorigin="anonymous "></script>
-
+    <!-- JAVASCRIPT  -->
+    <script type="text/javascript" src="assets/javascript/javatest.js"></script>
 </body>
+
 
 </html>

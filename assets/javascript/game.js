@@ -1,61 +1,77 @@
-$(document).ready(function () {
 
-});
 
-var targetNumber = " ";
-
-$("#random-score").text(targetNumber);
-
-var crystals = $("#crystals");
-
-//Set counter variables for 
-var counter = 0;
-var wins = 0;
+//Creates initial variables
+var random_result;
 var losses = 0;
+var wins = 0;
+var previousAmt = 0;
 
-//
-var randomCrystalValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-// Now for the hard part. Creating multiple crystals each with their own unique number value.
+var resetAndStart = function () {
 
-// We begin by expanding our array to include four options.
-var numberOptions = [];
+    $(".crystals").empty(); //empty's the crystals from previous game
 
-// Next we create a for loop to create crystals for every numberOption.
-for (var i = 0; i < 4; i++) {
+    var crystalImages = [
+        "assets/images/tiffany1.jpg",
+        "assets/images/tiffany2.jpg",
+        "assets/images/tiffany3.jpg",
+        "assets/images/tiffany4.jpg"];
 
-    // For each iteration, we will create an imageCrystal
-    var imageCrystal = $("<img>");
+    //Sets the random result anywhere between 19 and 102
+    random_result = Math.floor((Math.random() * 102) + 19);
 
-    // Each imageCrystal will be given a data attribute called data-crystalValue.
-    // This data attribute will be set equal to the array value.
-    imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+    $("#results").html("Random Score: " + random_result);
 
-    // Lastly, each crystal image (with all it classes and attributes) will get added to the page.
-    crystals.append(imageCrystal);
+    //Creates crystals and random values and assigns it 
+    for (var i = 0; i < 4; i++) {
+
+        //Assigns random value between 1-12 to Crystal
+        var random = Math.floor((Math.random() * 11) + 1);
+
+
+        //Creates crystals on HTML and assigns the random value
+        var crystal = $("<div>");
+        crystal.attr({
+            "class": 'crystal anime',
+            "data-random": random,
+        });
+        crystal.css({
+            "background-image": "url('"+ crystalImages[i]+"')",
+            "background-size": "cover"
+        });
+
+        $(".crystals").append(crystal)
+
+    }
+    $("#score").html("Your Score: " + previousAmt);
 }
 
-// This time, our click event applies to every single crystal on the page. Not just one.
-crystals.on("click", ".crystal-image", function () {
+resetAndStart();
 
-    // Determining the crystal's value requires us to extract the value from the data attribute.
-    // Using the $(this) keyword specifies that we should be extracting the crystal value of the clicked crystal.
-    // Using the .attr("data-crystalvalue") allows us to grab the value out of the "data-crystalvalue" attribute.
-    // Since attributes on HTML elements are strings, we must convert it to an integer before adding to the counter
+$(document).on("click", ".crystal", function () {
 
-    var crystalValue = ($(this).attr("data-crystalvalue"));
-    crystalValue = parseInt(crystalValue);
-    // We then add the crystalValue to the user's "counter" which is a global variable.
-    // Every click, from every crystal adds to the global counter.
-    counter += crystalValue;
+    var num = parseInt($(this).attr("data-random")); //Gets number from crystal and turns it into a number.
 
-    // All of the same game win-lose logic applies. So the rest remains unchanged.
-    alert("New score: " + counter);
 
-    if (counter === targetNumber) {
-        alert("You win!");
-    } else if (counter >= targetNumber) {
-        alert("You lose!!");
+    previousAmt += num; //adds Crystal number to the previoius amount.
+    $("#score").html("Your Score: " + previousAmt);
+
+
+    if (previousAmt > random_result) {
+        losses++;
+        $("#losses").html("Losses: " + losses);
+        previousAmt = 0;
+        console.log("Sorry, but you lost!! Play again!");
+        resetAndStart();
+
+
+    } else if (previousAmt === random_result) {
+        wins++;
+
+        $("#wins").html("Wins: " + wins);
+        console.log("Congratulations, you won!");
+        previousAmt = 0;
+        resetAndStart();
     }
 
 });

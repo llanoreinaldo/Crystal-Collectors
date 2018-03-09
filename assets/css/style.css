@@ -1,41 +1,36 @@
-
-
-#tl{
-    width: 75%;
-    padding-bottom: 5px;
+.crystals {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 75%;
+    justify-content: space-between;
+    border: 1px solid white;
+    align-items: center;
 }
 
-#tr{
-    width: 75%;
-    padding-bottom: 5px;
+.crystal {
+    border: 1px solid grey;
+    width: 200px;
+    height: 200px;
+    padding-right: 5px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
-
-#bl{
-    width: 75%;
-    padding-bottom: 5px;
-}
-
-
-#br{
-    width: 75%;
-    padding-bottom: 5px;
-}
-
-.crystal-image {
-    width: 300px;
-    height: 300px;
-}
-
 
 body {
     background-color: #81d8d0;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 34px;
     font-family: inherit;
     color: white;
-
 }
 
+h1 {
+    font-size: 76px;
+}
+
+img {
+    width: 75%;
+}
 
 /*footer*/
 
@@ -56,8 +51,6 @@ footer {
 }
 
 .anime {
-    float: left;
-    width: 90%;
     opacity: .5;
     transition: .5s;
     /* Animation */
@@ -68,4 +61,30 @@ footer {
     /* Animation */
     opacity: 1;
     border-radius: 75%;
+}
+
+@media (max-width: 640px) {
+    .crystal {
+        width: 125px;
+        height: 125px;
+    }
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .crystal {
+        width: 150px;
+        height: 150px;
+    }
+    body {
+        font-size: 14px;
+    }
+    h1 {
+    font-size: 30px;
+}
 }
