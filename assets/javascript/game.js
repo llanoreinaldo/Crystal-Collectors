@@ -16,7 +16,6 @@ var resetAndStart = function () {
         "assets/images/tiffany4.jpg"
     ];
 
-
     //Sets the random result anywhere between 19 and 102
     random_result = Math.floor((Math.random() * 102) + 19);
 
@@ -49,7 +48,7 @@ var resetAndStart = function () {
 
 resetAndStart();
 
-$('.crystal').on("click", function () {
+$(document).on("click touchstart", ".crystal", function () {
 
     var num = parseInt($(this).attr("data-random")); //Gets number from crystal and turns it into a number.
 
