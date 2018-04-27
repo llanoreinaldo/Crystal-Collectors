@@ -74,6 +74,10 @@ footer {
     h1 {
         font-size: 18px;
     }
+    p {
+    line-height: 2.5
+    }
+    ;
 }
 
 @media (max-width: 768px) {

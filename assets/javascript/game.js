@@ -1,5 +1,3 @@
-
-
 //Creates initial variables
 var random_result;
 var losses = 0;
@@ -15,7 +13,9 @@ var resetAndStart = function () {
         "assets/images/tiffany1.jpg",
         "assets/images/tiffany2.jpg",
         "assets/images/tiffany3.jpg",
-        "assets/images/tiffany4.jpg"];
+        "assets/images/tiffany4.jpg"
+    ];
+
 
     //Sets the random result anywhere between 19 and 102
     random_result = Math.floor((Math.random() * 102) + 19);
@@ -36,19 +36,20 @@ var resetAndStart = function () {
             "data-random": random,
         });
         crystal.css({
-            "background-image": "url('"+ crystalImages[i]+"')",
+            "background-image": "url('" + crystalImages[i] + "')",
             "background-size": "cover"
         });
 
         $(".crystals").append(crystal)
-
     }
+
+
     $("#score").html("Your Score: " + previousAmt);
 }
 
 resetAndStart();
 
-$('.crystal').on("click touchend", function () {
+$('.crystal').on("click", function () {
 
     var num = parseInt($(this).attr("data-random")); //Gets number from crystal and turns it into a number.
 
