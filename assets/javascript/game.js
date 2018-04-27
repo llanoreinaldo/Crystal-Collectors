@@ -48,7 +48,7 @@ var resetAndStart = function () {
 
 resetAndStart();
 
-$(document).on("click", ".crystal", function () {
+$(document).on("click touchstart", ".crystal", function () {
 
     var num = parseInt($(this).attr("data-random")); //Gets number from crystal and turns it into a number.
 
